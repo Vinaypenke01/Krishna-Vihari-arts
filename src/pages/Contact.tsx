@@ -74,21 +74,31 @@ ${form.message}`
   return (
     <div className="pt-20">
       {/* Banner Section */}
-      <section
-        className="section-padding relative"
-        style={{
-          backgroundImage: `url(${contactBanner})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <div className="container-narrow">
-          <SectionHeading
-            title="Get In Touch"
-            subtitle="Share your wall details and let us create a masterpiece for you"
-          />
+      <section className="relative h-[40vh] flex items-center justify-center overflow-hidden">
+
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url(${contactBanner})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40 z-0" />
+
+        {/* Content (ON TOP) */}
+        <div className="relative z-10 text-center ">
+          <h1 className="font-heading text-4xl md:text-5xl font-bold text-white mb-4">
+            Get In Touch
+          </h1>
+          <p className="text-white/80 text-lg max-w-xl mx-auto">
+            Share your wall details and let us create a masterpiece for you
+          </p>
         </div>
+
       </section>
 
       {/* Form Section */}

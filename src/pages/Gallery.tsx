@@ -30,26 +30,38 @@ const Gallery = () => {
 
   return (
     <div className="pt-20">
-      <section
-        className="section-padding relative"
-        style={{
-          backgroundImage: `url(${galleryBanner})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
+      <section className="relative h-[40vh] flex items-center justify-center overflow-hidden">
 
-        <div className="container-narrow">
-          <SectionHeading title="Gallery" subtitle="Browse our handcrafted artworks" className="[&_h2]:text-white [&_p]:text-white/80" />
-          <div className="flex flex-wrap justify-center gap-2">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url(${galleryBanner})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+
+        {/* Overlay (IMPORTANT) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/30 z-0" />
+
+        {/* Content */}
+        <div className="container-narrow relative z-10 text-center">
+          <SectionHeading
+            title="Gallery"
+            subtitle="Browse our handcrafted artworks"
+            className="[&_h2]:text-white [&_p]:text-white/80"
+          />
+
+          {/* Filters */}
+          <div className="flex flex-wrap justify-center gap-2 mt-6">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActive(cat)}
                 className={`px-4 py-2 rounded-full text-sm font-body transition-colors ${active === cat
                   ? "bg-gold text-gold-foreground"
-                  : "bg-background text-muted-foreground hover:bg-secondary"
+                  : "bg-white/20 backdrop-blur text-white hover:bg-white/30"
                   }`}
               >
                 {cat}
@@ -57,16 +69,18 @@ const Gallery = () => {
             ))}
           </div>
         </div>
+
       </section>
 
       <section className="section-padding bg-background">
-        <div className="container-narrow">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
             {filtered.map((item, i) => (
               <div
                 key={i}
                 onClick={() => setLightbox(item.src)}
-                className="relative overflow-hidden rounded-lg cursor-pointer group aspect-square"
+                className={`relative overflow-hidden rounded-lg cursor-pointer group ${i % 3 === 0 ? "aspect-[4/5]" : "aspect-square"
+                  }`}
               >
                 <img
                   src={item.src}

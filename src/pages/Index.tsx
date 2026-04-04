@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
-import { Paintbrush, Home as HomeIcon, Sparkles, Heart, Clock, CheckCircle } from "lucide-react";
+import { Paintbrush, Home as HomeIcon, Sparkles, Heart, Clock, CheckCircle, Palette, Image } from "lucide-react";
 import heroMural from "@/assets/hero-mural.jpg";
 import CanvasPreview from "@/components/CanvasPreview";
 import galleryMural from "@/assets/gallery-mural.jpg";
+import panIndia from "@/assets/pan-india.png";
 import gallerySpiritual from "@/assets/gallery-spiritual.jpg";
 import galleryCanvas from "@/assets/gallery-canvas.jpg";
 import galleryKids from "@/assets/gallery-kids.jpg";
@@ -12,9 +13,9 @@ import galleryBapu from "@/assets/gallery-bapu.jpg";
 
 const services = [
   { icon: HomeIcon, title: "Custom Wall Murals", desc: "Transform your homes, offices & cafés with stunning hand-painted murals" },
-  { icon: Paintbrush, title: "Canvas Paintings", desc: "Bespoke canvas art crafted with devotion and artistic excellence" },
+  { icon: Image, title: "Canvas Paintings", desc: "Bespoke canvas art crafted with devotion and artistic excellence" },
   { icon: Sparkles, title: "Spiritual & Devotional Art", desc: "Sacred visual storytelling rooted in Indian culture and spirituality" },
-  { icon: Heart, title: "Kalamkari Illustration Style", desc: "Traditional Telugu art celebrating feminine grace and village life" },
+  { icon: Palette, title: "Traditional Illustration Style", desc: "Traditional Telugu art celebrating feminine grace and village life" },
 ];
 
 const featuredWorks = [
@@ -189,6 +190,67 @@ const Index = () => {
                 <p className="text-muted-foreground text-sm font-body">{item.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Coverage & Budget */}
+      {/* Service Coverage & Budget */}
+      <section className="section-padding bg-warm">
+        <div className="container-narrow">
+
+          <SectionHeading
+            title="Serving Across India 🇮🇳"
+            subtitle="Bringing handcrafted art to spaces across cities, homes & businesses"
+          />
+
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+
+            {/* Left Content */}
+            <div>
+              <p className="text-muted-foreground font-body mb-6 leading-relaxed">
+                Krishna Vihari Arts proudly delivers custom murals and paintings across India.
+                From cozy homes to vibrant cafés and spiritual spaces, we create artwork that
+                connects deeply with your space and story.
+              </p>
+
+              {/* Highlights */}
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-gold rounded-full"></span>
+                  <p className="text-sm text-foreground">Projects delivered across multiple cities</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-gold rounded-full"></span>
+                  <p className="text-sm text-foreground">Trusted by homes, cafés & studios</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-gold rounded-full"></span>
+                  <p className="text-sm text-foreground">Travel-ready for meaningful projects</p>
+                </div>
+              </div>
+
+              <p className="mt-6 text-foreground/80 font-body">
+                ✨ Every wall we paint becomes a story that lasts for years.
+              </p>
+            </div>
+
+            {/* Right Image */}
+            <div className="relative">
+              <img
+                src={panIndia} // you can replace with better wide mural image later
+                alt="Wall mural across India"
+                className="rounded-xl w-full h-[350px] object-cover shadow-lg"
+              />
+
+              {/* Overlay Badge */}
+              <div className="absolute bottom-4 left-4 bg-background/90 backdrop-blur px-4 py-2 rounded-lg shadow">
+                <p className="text-sm font-medium text-foreground">
+                  🇮🇳 Pan India Projects
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
