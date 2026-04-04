@@ -1,6 +1,6 @@
 import SectionHeading from "@/components/SectionHeading";
 import galleryCanvas from "@/assets/krishna-vihari.jpeg";
-import aboutBanner from "@/assets/krishna-vihari-about-banner.jpeg";
+import aboutBanner from "@/assets/Krishna-vihari-about-banner.jpeg";
 
 const About = () => {
   return (
