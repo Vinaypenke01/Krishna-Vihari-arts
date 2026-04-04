@@ -1,0 +1,26 @@
+/* Redirect netlify.app domain to main domain */
+https://krishnavihari-arts.netlify.app/* https://krishnavihari.com/:splat 301!
+https://www.krishnavihari.com/* https://krishnavihari.com/:splat 301!
+
+/* Single Page Application - Redirect all 404s to index.html */
+/*  /index.html 200
+
+/* Specific redirects for common old URLs */
+/paintings /gallery 301
+/artworks /gallery 301
+/murals /gallery 301
+/wallarts /gallery 301
+/portfolio /gallery 301
+/work /gallery 301
+
+/* Cache static assets */
+/assets/* /assets/:splat 200
+/public/* /public/:splat 200
+
+/* Security headers */
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: script-src 'self'; style-src 'self' 'unsafe-inline'

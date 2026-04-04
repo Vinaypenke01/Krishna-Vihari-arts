@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Gallery images sitemap -->
+  <url>
+    <loc>https://krishnavihari.com/gallery</loc>
+    <image:image>
+      <image:loc>https://krishnavihari.com/assets/gallery-mural.jpg</image:loc>
+      <image:title>Cafe mural with elephants and mandalas</image:title>
+      <image:caption>Traditional artistic mural painting</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishnavihari.com/assets/gallery-spiritual.jpg</image:loc>
+      <image:title>Ganesha abstract canvas painting</image:title>
+      <image:caption>Spiritual abstract canvas artwork</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishnavihari.com/assets/gallery-canvas.jpg</image:loc>
+      <image:title>Temple landscape canvas painting</image:title>
+      <image:caption>Canvas painting featuring temple landscape</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishnavihari.com/assets/gallery-kids.jpg</image:loc>
+      <image:title>Colorful kids room wall art</image:title>
+      <image:caption>Vibrant wall art designed for children's rooms</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishnavihari.com/assets/gallery-bapu.jpg</image:loc>
+      <image:title>Kalamkari Illustration style woman painting</image:title>
+      <image:caption>Traditional Kalamkari art style portrait</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishnavihari.com/assets/hero-mural.jpg</image:loc>
+      <image:title>Krishna wall mural in living room</image:title>
+      <image:caption>Beautiful Krishna themed wall mural</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Home page featured image -->
+  <url>
+    <loc>https://krishnavihari.com/</loc>
+    <image:image>
+      <image:loc>https://krishnavihari.com/logo.png</image:loc>
+      <image:title>Krishna Vihari Arts Logo</image:title>
+      <image:caption>Professional artist Krishna Vihari branding</image:caption>
+    </image:image>
+  </url>
+</urlset>

@@ -1,14 +1,47 @@
+# Allow all search engines
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+# Specific permissions for major search engines
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 0
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
-User-agent: Twitterbot
+User-agent: Slurp
 Allow: /
 
-User-agent: facebookexternalhit
+User-agent: DuckDuckBot
 Allow: /
 
+User-agent: Baiduspider
+Allow: /
+
+# Restrict some bot traffic
+User-agent: MJ12bot
+Allow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://krishnavihari.com/sitemap.xml
+Sitemap: https://krishnavihari.com/sitemap-images.xml
+
+# Specify cache control
 User-agent: *
-Allow: /
+Disallow: /admin
+Disallow: /private
+Disallow: /*.json$
+Disallow: /*.sql$
+Disallow: /.env
+Disallow: /config
+Disallow: /.git
+
