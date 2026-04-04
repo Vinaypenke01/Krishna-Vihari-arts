@@ -171,7 +171,7 @@ const loadCanvasImages = () =>
   Promise.all([
     import("@/assets/canvas/canvas.jpeg"),
     import("@/assets/canvas/canvas2.jpeg"),
-    import("@/assets/canvas/canvas3.jpeg"),
+    // import("@/assets/canvas/canvas3.jpeg"),
     import("@/assets/canvas/canvas4.jpeg"),
     import("@/assets/canvas/canvas5.jpeg"),
     import("@/assets/canvas/canvas6.jpeg"),
