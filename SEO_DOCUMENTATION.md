@@ -113,8 +113,8 @@ Submit these sitemaps to search engines:
 ### Google Search Console
 ```
 https://www.google.com/webmasters
-- Add sitemap: https://krishnavihari.com/sitemap.xml
-- Add image sitemap: https://krishnavihari.com/sitemap-images.xml
+- Add sitemap: https://krishnavihariarts.in/sitemap.xml
+- Add image sitemap: https://krishnavihariarts.in/sitemap-images.xml
 ```
 
 ### Bing Webmaster Tools

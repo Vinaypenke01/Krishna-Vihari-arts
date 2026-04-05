@@ -157,21 +157,21 @@ interface GalleryItem {
 // Dynamically imported image data organized by category
 const getGalleryItems = async (): Promise<GalleryItem[]> => {
   return [
-    { src: galleryMural, alt: "Cafe mural with elephants and mandalas", category: "Traditional Art" as const },
-    { src: gallerySpiritual, alt: "Ganesha abstract canvas painting", category: "Traditional Art" as const },
-    { src: galleryCanvas, alt: "Temple landscape canvas painting", category: "Canvas" as const },
-    { src: galleryKids, alt: "Colorful kids room wall art", category: "Cafes" as const },
-    { src: galleryBapu, alt: "Kalamkari Illustration style woman painting", category: "Traditional Art" as const },
-    { src: heroMural, alt: "Krishna wall mural in living room", category: "Traditional Art" as const },
+    // { src: galleryMural, alt: "Cafe mural with elephants and mandalas", category: "Traditional Art" as const },
+    // { src: gallerySpiritual, alt: "Ganesha abstract canvas painting", category: "Traditional Art" as const },
+    // { src: galleryCanvas, alt: "Temple landscape canvas painting", category: "Canvas" as const },
+    // { src: galleryKids, alt: "Colorful kids room wall art", category: "Cafes" as const },
+    // { src: galleryBapu, alt: "Kalamkari Illustration style woman painting", category: "Traditional Art" as const },
+    // { src: heroMural, alt: "Krishna wall mural in living room", category: "Traditional Art" as const },
   ];
 };
 
 // Lazy load canvas images
 const loadCanvasImages = () =>
   Promise.all([
-    import("@/assets/canvas/canvas.jpeg"),
+    
     import("@/assets/canvas/canvas2.jpeg"),
-    // import("@/assets/canvas/canvas3.jpeg"),
+    import("@/assets/canvas/canvas3.jpg"),
     import("@/assets/canvas/canvas4.jpeg"),
     import("@/assets/canvas/canvas5.jpeg"),
     import("@/assets/canvas/canvas6.jpeg"),
@@ -180,6 +180,15 @@ const loadCanvasImages = () =>
     import("@/assets/canvas/canvas8.jpeg"),
     import("@/assets/canvas/canvas9.jpeg"),
     import("@/assets/canvas/canvas10.jpeg"),
+    import("@/assets/canvas/canvas11.jpeg"),
+    import("@/assets/canvas/canvas12.jpeg"),
+    import("@/assets/modern/modern-1.jpeg"),
+    import("@/assets/modern/modern-4.jpeg"),
+    import("@/assets/modern/modern-5.jpeg"),
+    import("@/assets/modern/modern7.jpeg"),
+    import("@/assets/modern/modern8.jpeg"),
+    import("@/assets/modern/modern9.jpeg"),
+    import("@/assets/modern/modern10.jpeg"),
   ]).then((modules) =>
     modules.map((m, i) => ({
       src: (m as any).default,
@@ -191,21 +200,21 @@ const loadCanvasImages = () =>
 // Lazy load traditional art images
 const loadTraditionalImages = () =>
   Promise.all([
+    import("@/assets/canvas/canvas.jpeg"),
     import("@/assets/wallarts/wall-art1.jpeg"),
     import("@/assets/wallarts/wall-art2.jpeg"),
-    import("@/assets/wallarts/wall-art3.jpeg"),
     import("@/assets/wallarts/wall-art4.jpeg"),
     import("@/assets/wallarts/wall-art5.jpeg"),
     import("@/assets/wallarts/wall-art6.jpeg"),
     import("@/assets/wallarts/wall-art7.jpeg"),
     import("@/assets/wallarts/wall-art8.jpeg"),
-    import("@/assets/wallarts/wall-art9.jpeg"),
-    import("@/assets/wallarts/wall-art10.jpeg"),
-    import("@/assets/wallarts/wall-art11.jpeg"),
     import("@/assets/wallarts/wall-art12.jpeg"),
     import("@/assets/wallarts/wall-art13.jpeg"),
-    import("@/assets/wallarts/wall-art14.jpeg"),
     import("@/assets/wallarts/wall-art15.jpeg"),
+    import("@/assets/wallarts/wall-art16.jpeg"),  
+    import("@/assets/wallarts/wall-art17.jpeg"),  
+    import("@/assets/wallarts/wall-art18.jpeg"),
+    
   ]).then((modules) =>
     modules.map((m, i) => ({
       src: (m as any).default,
@@ -217,16 +226,16 @@ const loadTraditionalImages = () =>
 // Lazy load modern art images
 const loadModernImages = () =>
   Promise.all([
-    import("@/assets/modern/modern-1.jpeg"),
+
+    import("@/assets/wallarts/wall-art3.jpeg"),
+    import("@/assets/wallarts/wall-art9.jpeg"),
+    import("@/assets/wallarts/wall-art10.jpeg"),
+    import("@/assets/wallarts/wall-art14.jpeg"),
+    import("@/assets/wallarts/wall-art11.jpeg"),
+    import("@/assets/modern/modern-12.jpeg"),
     import("@/assets/modern/modern-2.jpeg"),
     import("@/assets/modern/modern-3.jpeg"),
-    import("@/assets/modern/modern-4.jpeg"),
-    import("@/assets/modern/modern-5.jpeg"),
     import("@/assets/modern/modern-6.jpeg"),
-    import("@/assets/modern/modern7.jpeg"),
-    import("@/assets/modern/modern8.jpeg"),
-    import("@/assets/modern/modern9.jpeg"),
-    import("@/assets/modern/modern10.jpeg"),
     import("@/assets/modern/modern11.jpeg"),
   ]).then((modules) =>
     modules.map((m, i) => ({
@@ -240,6 +249,7 @@ const loadModernImages = () =>
 const loadCafeImages = () =>
   Promise.all([
     import("@/assets/Business/business1.jpeg"),
+    import("@/assets/Business/business3.jpeg"),
     import("@/assets/Business/business2.jpeg"),
   ]).then((modules) =>
     modules.map((m, i) => ({
@@ -313,7 +323,7 @@ const LazyImage = memo(({ src, alt, onClick, loading }: LazyImageProps) => {
           loaded ? "opacity-100" : "opacity-0"
         }`}
       />
-      <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/30 transition-colors" />
+      <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/30 transition-colors pointer-events-none" />
     </div>
   );
 });
@@ -444,6 +454,16 @@ const Gallery = () => {
 
   const ITEMS_PER_PAGE = 12;
 
+  // Shuffle array function for clumsy ordering
+  const shuffleArray = <T,>(array: T[]): T[] => {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  };
+
   // Load initial hero images and cache loaders
   useEffect(() => {
     const initializeGallery = async () => {
@@ -487,7 +507,9 @@ const Gallery = () => {
             ? categoryImagesCache.current["Cafes"]
             : loadCafeImages()) as Promise<GalleryItem[]>,
         ]);
-        setAllItems([...hero, ...canvas, ...traditional, ...modern, ...cafes]);
+        // Shuffle all items for a clumsy/mixed display
+        const allImages = shuffleArray([...hero, ...canvas, ...traditional, ...modern, ...cafes]);
+        setAllItems(allImages);
         setLoading(false);
       };
       loadAll();
@@ -638,13 +660,26 @@ const Gallery = () => {
           >
             <X size={32} />
           </button>
-          <img
-            src={lightbox}
-            alt="Gallery preview"
-            className="max-w-full max-h-[90vh] object-contain rounded-lg animate-in fade-in duration-300"
-            onClick={(e) => e.stopPropagation()}
-            loading="lazy"
-          />
+          <div className="max-w-full max-h-[90vh] flex flex-col items-center">
+            <img
+              src={lightbox}
+              alt="Gallery preview"
+              className="max-w-full max-h-[80vh] object-contain rounded-lg animate-in fade-in duration-300"
+              onClick={(e) => e.stopPropagation()}
+              loading="lazy"
+            />
+            {/* Category display */}
+            {(() => {
+              const selectedItem = allItems.find(item => item.src === lightbox);
+              return selectedItem ? (
+                <div className="mt-4 bg-background/90 backdrop-blur-sm rounded-lg px-4 py-2">
+                  <p className="text-foreground font-semibold text-center">
+                    Category: <span className="text-gold">{selectedItem.category}</span>
+                  </p>
+                </div>
+              ) : null;
+            })()}
+          </div>
         </div>
       )}
     </div>

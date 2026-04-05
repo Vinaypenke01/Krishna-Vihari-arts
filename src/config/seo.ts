@@ -7,8 +7,8 @@ export const SEO_CONFIG = {
   site: {
     name: "Krishna Vihari Arts",
     description: "Professional artist specializing in traditional paintings, modern wall arts, canvas paintings, murals, and custom artwork",
-    baseUrl: "https://krishnavihari.com",
-    image: "/logo.png",
+    baseUrl: "https://krishnavihariarts.in",
+    image: "/Krishna_Vihari_page-logo.png",
     twitterHandle: "@krishnavihari",
   },
   
@@ -56,8 +56,8 @@ export const SEO_CONFIG = {
       "@type": "LocalBusiness",
       name: "Krishna Vihari Arts",
       description: "Professional artist specializing in paintings, wall arts, and murals",
-      url: "https://krishnavihari.com/",
-      image: "/logo.png",
+      url: "https://krishnavihariarts.in/",
+      image: "/Krishna_Vihari_page-logo.png",
       priceRange: "$$",
       sameAs: [
         "https://facebook.com/krishnavihari",
@@ -95,7 +95,7 @@ function generateBreadcrumbs(path: string) {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://krishnavihari.com/",
+      item: "https://krishnavihariarts.in/",
     },
   ];
 
@@ -109,7 +109,7 @@ function generateBreadcrumbs(path: string) {
         "@type": "ListItem",
         position: index + 2,
         name: pageData.title.split(" - ")[0],
-        item: `https://krishnavihari.com${pageData.slug}`,
+        item: `https://krishnavihariarts.in${pageData.slug}`,
       });
     }
   });

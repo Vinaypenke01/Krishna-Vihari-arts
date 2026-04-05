@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import galleryMural from "@/assets/custom-wallart.jpeg";
 import galleryCanvas from "@/assets/canvas-service-page.jpeg";
-import gallerySpiritual from "@/assets/gallery-spiritual.jpg";
-import galleryBapu from "@/assets/gallery-bapu.jpg";
-import galleryKids from "@/assets/gallery-kids.jpg";
+import gallerySpiritual from "@/assets/canvas/canvas.jpeg";
+import galleryBapu from "@/assets/canvas/canvas3.jpg";
+import galleryKids from "@/assets/Business/business1.jpeg";
 import servicesBanner from "@/assets/Jay sita ram.jpeg";
 
 const services = [

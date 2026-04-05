@@ -1,6 +1,6 @@
 /* Redirect netlify.app domain to main domain */
-https://krishnavihari-arts.netlify.app/* https://krishnavihari.com/:splat 301!
-https://www.krishnavihari.com/* https://krishnavihari.com/:splat 301!
+https://krishnavihari-arts.netlify.app/* https://krishnavihariarts.in/:splat 301!
+https://www.krishnavihariarts.in/* https://krishnavihariarts.in/:splat 301!
 
 /* Single Page Application - Redirect all 404s to index.html */
 /*  /index.html 200

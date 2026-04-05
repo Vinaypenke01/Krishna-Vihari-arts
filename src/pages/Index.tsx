@@ -4,12 +4,12 @@ import SectionHeading from "@/components/SectionHeading";
 import { Paintbrush, Home as HomeIcon, Sparkles, Heart, Clock, CheckCircle, Palette, Image } from "lucide-react";
 import heroMural from "@/assets/hero-mural.jpg";
 import CanvasPreview from "@/components/CanvasPreview";
-import galleryMural from "@/assets/gallery-mural.jpg";
+import galleryMural from "@/assets/canvas/canvas3.jpg";
 import panIndia from "@/assets/pan-india.png";
-import gallerySpiritual from "@/assets/gallery-spiritual.jpg";
-import galleryCanvas from "@/assets/gallery-canvas.jpg";
-import galleryKids from "@/assets/gallery-kids.jpg";
-import galleryBapu from "@/assets/gallery-bapu.jpg";
+import gallerySpiritual from "@/assets/wallarts/wall-art1.jpeg";
+import galleryCanvas from "@/assets/wallarts/wall-art6.jpeg";
+import galleryKids from "@/assets/wallarts/wall-art7.jpeg";
+import galleryBapu from "@/assets/Business/business1.jpeg";
 
 const services = [
   { icon: HomeIcon, title: "Custom Wall Murals", desc: "Transform your homes, offices & cafés with stunning hand-painted murals" },
@@ -19,11 +19,11 @@ const services = [
 ];
 
 const featuredWorks = [
-  { src: galleryMural, alt: "Cafe mural with elephants", category: "Murals" },
-  { src: gallerySpiritual, alt: "Ganesha canvas painting", category: "Spiritual" },
-  { src: galleryCanvas, alt: "Temple landscape canvas", category: "Canvas" },
-  { src: galleryKids, alt: "Kids room wall art", category: "Kids" },
-  { src: galleryBapu, alt: "Bapu style painting", category: "Bapu Style" },
+  { src: galleryMural, alt: "Cafe mural with elephants", category: "" },
+  { src: gallerySpiritual, alt: "Ganesha canvas painting", category: "" },
+  { src: galleryCanvas, alt: "Temple landscape canvas", category: "" },
+  { src: galleryKids, alt: "Kids room wall art", category: "" },
+  { src: galleryBapu, alt: "Bapu style painting", category: "" },
 ];
 
 const whyChoose = [

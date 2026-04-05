@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/Krishna_Vihari_page-logo.png";
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -19,9 +19,9 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 md:h-24">
-          <Link to="/" className="flex items-center">
-            <img src={logo} alt="Krishna Vihari Arts" className="h-[100px] md:h-[120px] w-auto object-contain" />
+        <div className="flex items-center justify-between h-16 sm:h-20 md:h-24">
+          <Link to="/" className="flex items-center shrink-0 h-full">
+            <img src={logo} alt="Krishna Vihari Arts" className="h-16 sm:h-24 md:h-32 w-auto object-contain"  />
           </Link>
 
           {/* Desktop Nav */}

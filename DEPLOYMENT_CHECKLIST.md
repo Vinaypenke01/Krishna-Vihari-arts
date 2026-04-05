@@ -31,7 +31,7 @@ These files have been created to improve search engine visibility and site perfo
 ## 📋 Before Hosting
 
 ### Domain Setup
-- [ ] Register domain (e.g., krishnavihari.com)
+- [ ] Register domain (e.g., krishnavihariarts.in)
 - [ ] Update domain in `index.html` Open Graph URL tags
 - [ ] Update domain in `src/config/seo.ts` baseUrl
 - [ ] Update domain in `netlify.toml` and `vercel.json` redirect rules
@@ -43,11 +43,11 @@ These files have been created to improve search engine visibility and site perfo
 - [ ] Add property with your domain
 - [ ] Upload **sitemap.xml**:
   ```
-  https://krishnavihari.com/sitemap.xml
+  https://krishnavihariarts.in/sitemap.xml
   ```
 - [ ] Upload **sitemap-images.xml**:
   ```
-  https://krishnavihari.com/sitemap-images.xml
+  https://krishnavihariarts.in/sitemap-images.xml
   ```
 - [ ] Verify domain ownership
 - [ ] Submit to Bing Webmaster Tools (https://www.bing.com/webmaster)
@@ -109,7 +109,7 @@ These files have been created to improve search engine visibility and site perfo
 
 ### Netlify Environment Variables (if needed):
 ```
-VITE_API_URL = https://api.krishnavihari.com
+VITE_API_URL = https://api.krishnavihariarts.in
 ```
 
 ---
@@ -130,7 +130,7 @@ VITE_API_URL = https://api.krishnavihari.com
 
 ### Vercel Environment Variables:
 ```
-VITE_API_URL=https://api.krishnavihari.com
+VITE_API_URL=https://api.krishnavihariarts.in
 ```
 
 ---

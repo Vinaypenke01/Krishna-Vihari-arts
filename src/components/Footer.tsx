@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, MessageCircle, Mail, MapPin } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/Krishna_Vihari_page-logo.png";
 
 const Footer = () => {
   return (

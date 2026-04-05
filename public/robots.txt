@@ -32,8 +32,8 @@ User-agent: SemrushBot
 Disallow: /
 
 # Sitemap location
-Sitemap: https://krishnavihari.com/sitemap.xml
-Sitemap: https://krishnavihari.com/sitemap-images.xml
+Sitemap: https://krishnavihariarts.in/sitemap.xml
+Sitemap: https://krishnavihariarts.in/sitemap-images.xml
 
 # Specify cache control
 User-agent: *

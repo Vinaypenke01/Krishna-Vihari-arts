@@ -69,14 +69,14 @@
   status = 200
 
 [[redirects]]
-  from = "https://www.krishnavihari.com/*"
-  to = "https://krishnavihari.com/:splat"
+  from = "https://www.krishnavihariarts.in/*"
+  to = "https://krishnavihariarts.in/:splat"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://krishnavihari-arts.netlify.app/*"
-  to = "https://krishnavihari.com/:splat"
+  to = "https://krishnavihariarts.in/:splat"
   status = 301
   force = true
 
